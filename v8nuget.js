@@ -141,7 +141,7 @@ for(var p=0; p<platforms.length; p++) {
         var platform = platforms[p];
         var flavor = flavors[f];
 
-        var srcdir = path.format({dir: program.v8dir,  base: 'out' });
+        var srcdir = path.format({dir: program.v8dir,  base: program.outdir });
         srcdir = path.format({dir: srcdir,  base: platform });
         srcdir = path.format({dir: srcdir,  base: flavor });
         if(!fs.existsSync(srcdir)){
